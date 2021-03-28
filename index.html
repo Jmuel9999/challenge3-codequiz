@@ -14,7 +14,7 @@
         <p>Time:</p>
       </nav>
     </h1>
-    <section class="pregame">
+    <section class="prequiz">
       <div id="quizstart">
         <h2 class="quizstarth2">Code Quiz Challenge</h2>
         <div class="quizstartinner">
@@ -25,9 +25,22 @@
         </div>
       </div>
     </section>
-    <div id="quiz"></div>
-    <button id="submit" class="submitbtn">Submit</button>
-    <div id="results"></div>
+    <div id="quiz-container" class="quizcontainer">
+      <!--rewrite "hide"-->
+      <div id="question-container" class="hide">
+        <div id="question"></div>
+        <div id="answerbtns" class="quizbtns">
+          <button class="btn">1</button>
+          <button class="btn">2</button>
+          <button class="btn">3</button>
+          <button class="btn">4</button>
+        </div>
+      </div>
+      <div class="btncontrols">
+        <button id="startbtn" class="start-btn">Start</button>
+        <button id="nextbtn" class="next-btn">Next</button>
+      </div>
+    </div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
