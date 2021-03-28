@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/*nav style start*/
 .navflex a {
   padding: 15px 0 0 25px;
   display: flex;
@@ -11,4 +12,36 @@
   color: pink;
   text-decoration: none;
   font-size: 25px;
+}
+
+.navflex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.navflex p {
+  font-size: 25px;
+  padding-right: 25px;
+}
+/*end of nav style*/
+
+/*challenge window style start*/
+.quizstarth2 {
+  padding: 50px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 39px;
+}
+
+.quizstartinner {
+  padding: 20px 415px 20px 415px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-size: 18px;
+  line-height: 25px;
 }
