@@ -5,7 +5,10 @@ var quizContainer = document.getElementById("quiz-container");
 //var submitButton = document.getElementById("submit");
 var resultsContainer = document.getElementById("results");
 var questionEl = document.getElementById("question");
-var answerEl = document.getElementById("answerbtns")
+var answerEl = document.getElementById("answerbtns");
+//var questionCont = document.getElementById("question-container")
+//var btnHide = document.getElementById("ansbtn");
+var nextButton = document.getElementById("nextbtn");
 
 let randomQuestions, currentQuestionIndex;
 
@@ -50,7 +53,7 @@ var quizQuestions = [
     },
     { question: "On a scale of one to four, my stress level with this course is: ",
     answers: [{ text: "1", correct: false}, {text:"2", correct: false }, 
-    {text: "3", correct: false}, {text: "457367563745.6", correct: true}]
+    {text: "3", correct: false}, {text: "4573.6", correct: true}]
     },
 ];
 
@@ -59,19 +62,42 @@ function startQuiz(){
     startBtn.classList.add("hide");
     //shuffles question order
     randomQuestions = quizQuestions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0;
+    qIndex = 0;
+    //debugger;
     quizContainer.classList.remove("hide");
+    //questionCont.classList.remove("hide");
+    answerEl.classList.remove("hide");
+    //btnHide.classList.remove("hide"); only brough choice a back
     nextQuestion();
 };
 
 function nextQuestion(){
-    showQuestion(randomQuestions[currentQuestionIndex])
+    //calls new questiong format for each question
+    resetQuestion()
+    cueQuestion(randomQuestions[qIndex])
 };
 
-function showQuestion(question){
+function cueQuestion(question){
     questionEl.innerText = question.question
+    question.answers.forEach(answer => {
+        var button = document.createElement("button")
+        button.innerText = answer.text
+        button.classList.add("btn")
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        };
+        button.addEventListener("click", pickAnswer);
+        answerEl.appendChild(button);
+    });
 };
 
-function selectAnswer(){
+function resetQuestion(){
+    nextbtn.classList.add("hide")
+    while (answerEl.firstChild) {
+        answerEl.removeChild(answerEl.firstChild)
+    }
+}
+
+function pickAnswer(event){
 
 };

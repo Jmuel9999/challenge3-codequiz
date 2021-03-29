@@ -6,7 +6,7 @@
 
 .containerone {
   padding: 70px;
-  margin: 0;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,15 +27,21 @@
   padding: 15px;
 }
 
+.questioncont {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 5px 10px 5px;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+}
+
 /*button display style start*/
 .quizbtns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 60%;
-  gap: 7px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 12px;
 }
 
 .btn {
@@ -43,6 +49,7 @@
   font-size: 24px;
   font-weight: 600;
   padding: 15px;
+  border-radius: 10px;
 }
 
 .btncontrols {
@@ -126,6 +133,6 @@ span {
   line-height: 25px;
 } */
 
-/* .hide {
+.hide {
   display: none;
-} */
+}
