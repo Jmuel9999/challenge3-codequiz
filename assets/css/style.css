@@ -58,11 +58,11 @@
   gap: 7px;
 }
 
-.btn.correct {
+.correct {
   background-color: rgb(33, 209, 136);
 }
 
-.btn.incorrect {
+.incorrect {
   background-color: red;
 }
 
