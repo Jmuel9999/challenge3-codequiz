@@ -24,26 +24,6 @@ nextButton.addEventListener("click", () => {
     nextQuestion();
 });
 
-
-// //Question array
-// var quizQuestions = [
-//     {questionOne: "Commonly used data types DO NOT include:",
-//         answers: {1: "strings", 2: "booleans", 3: "alerts", 4: "numbers"},
-//             correctAnswer: "3"},
-//     {questionTwo: "The condition of an if/else statement is enclosed with ___________.",
-//         answers: {1: "quotes", 2: "curly brackets", 3: "parenthesis", 4: "square brackets"},
-//             correctAnswer: "3"},
-//     {questionThree: "Arrays in JavaScript can be used to store ____________.",
-//         answers: {1: "numbers and strings", 2: "other arrays", 3: "booleans", 4: "all of the above"},
-//             correctAnswer: "4"},
-//     {questionFour: "String values must be enclosed within _____________ when being assigned to variables.",
-//         answers: {1: "commas", 2: "curly brackets", 3: "quotes", 4: "parenthesis"},
-//             correctAnswer: "3"},
-//     {questionFive: "A very useful tool used during development and debugging for printing content to the debugger is:",
-//         answers: {1: "JavaScript", 2: "terminal/bash", 3: "for loops", 4: "console.log"},
-//             correctAnswer: "4"},   
-// ];
-
 var quizQuestions = [
     { question: "Commonly used data types DO NOT include:",
       answers: [{ text: "strings", correct: false}, {text:"booleans", correct: false }, 
@@ -92,7 +72,7 @@ function cueQuestion(question){
         button.classList.add("btn")
         if (answer.correct) {
             button.dataset.correct = answer.correct
-        };
+        } 
         button.addEventListener("click", pickAnswer);
         answerEl.appendChild(button);
     });
@@ -134,11 +114,8 @@ function clearStatusClass(element) {
     element.classList.remove("incorrect")
 };
 
-// function wrongAnswer (){
-
-// }
-
 //timer code start
+
 var timeIntervalUp;
 var secondsDown = 60;
 function startTimer(){
@@ -147,21 +124,22 @@ function startTimer(){
 function countTimer() {
     document.getElementById("timer").innerHTML = "Time Remaining: " + secondsDown;
     secondsDown--;
-        if (secondsDown === 0) {
+        if (secondsDown <= 0) {
             clearInterval(timeIntervalUp);
+            alert("Time's Up!")
             endTimer();
             XMLHttpRequestUpload();
+            endQuiz();
         };
+        // document.getElementById("incorrect").addEventListener("click", function() {
+        //     secondsDown -= 5;
+        //     document.getElementById("timer").innerHTML = "00: " +secondsDown;
+        // });
+        // startTimer();
 };
 
-// var count = 5;
-// var counter = setInterval(quizTimer, 1000);
-// function quizTimer(){
-//     document.getElementById("timer").innerHTML = count + " seconds left!";
-//     count--;
-//     //clearInterval(counter);
-//     if (count === 0){
-//         clearInterval(counter);
-//         alert("Game Over!")
-//     }
-// };
+function endQuiz() {
+    window.alert("The quiz is over, let's see how you did!");
+    var highScore = localStorage.getItem("highscore") || 0;
+    
+};
