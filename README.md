@@ -12,4 +12,4 @@ A website that can test one's knowledge of JavaScript with a little quiz, all wh
 
 
 ## Screenshot
-![Full website screenshot.](
+![Full website screenshot.](./assets/images/challenge4shot.png)
