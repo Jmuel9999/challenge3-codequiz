@@ -4,12 +4,82 @@
   box-sizing: border-box;
 }
 
-.quizcontainer {
+.containerone {
+  padding: 70px;
+  margin: 0;
   display: flex;
-  width: 100vw;
-  height: 100vh;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(106, 136, 175);
+}
+
+.quizcontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 800px;
+  max-width: 26%;
+  background-color: rgb(171, 230, 195);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/*button display style start*/
+.quizbtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 60%;
+  gap: 7px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  height: 90%;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.btncontrols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.btn.correct {
+  background-color: rgb(33, 209, 136);
+}
+
+.btn.incorrect {
+  background-color: red;
+}
+
+.start-btn {
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.next-btn {
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.divspan {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  font-size: 20px;
 }
 
 /*nav style start*/
@@ -27,6 +97,8 @@
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+  z-index: 9999;
+  background-color: rgb(106, 136, 175);
 }
 
 .navflex p {
@@ -36,7 +108,7 @@
 /*end of nav style*/
 
 /*challenge window style start*/
-.quizstarth2 {
+/* .quizstarth2 {
   padding: 50px 0 0 0;
   display: flex;
   flex-wrap: wrap;
@@ -52,4 +124,8 @@
   width: 100%;
   font-size: 18px;
   line-height: 25px;
-}
+} */
+
+/* .hide {
+  display: none;
+} */

@@ -14,31 +14,28 @@
         <p>Time:</p>
       </nav>
     </h1>
-    <section class="prequiz">
-      <div id="quizstart">
-        <h2 class="quizstarth2">Code Quiz Challenge</h2>
-        <div class="quizstartinner">
-          Welcome to the Code Quiz Challenge! Begin the quiz by clicking the
-          button below. You will have 60 seconds to answer the questions. Get
-          any wrong, and you will lose time! Good luck!!
-          <button id="startquiz" class="startquizbtn">Start Quiz!</button>
+    <div class="containerone">
+      <div id="quiz-container" class="quizcontainer">
+        <!--rewrite "hide"-->
+        <div id="question-container" class="hide">
+          <div id="question" class="divspan">
+            <span
+              >Welcome to the Code Quiz Challenge! Begin the quiz by clicking
+              the button below. You will have 60 seconds to answer the
+              questions. Get any wrong, and you will lose time! Good luck!!
+            </span>
+          </div>
+          <div id="answerbtns" class="quizbtns">
+            <button class="btn">a</button>
+            <button class="btn">b</button>
+            <button class="btn">c</button>
+            <button class="btn">d</button>
+          </div>
         </div>
-      </div>
-    </section>
-    <div id="quiz-container" class="quizcontainer">
-      <!--rewrite "hide"-->
-      <div id="question-container" class="hide">
-        <div id="question"></div>
-        <div id="answerbtns" class="quizbtns">
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">4</button>
+        <div class="btncontrols">
+          <button id="startbtn" class="start-btn">Start</button>
+          <button id="nextbtn" class="next-btn">Next</button>
         </div>
-      </div>
-      <div class="btncontrols">
-        <button id="startbtn" class="start-btn">Start</button>
-        <button id="nextbtn" class="next-btn">Next</button>
       </div>
     </div>
     <script src="./assets/js/script.js"></script>
